@@ -1,9 +1,9 @@
 "use client";
 
-export default function Component({param}) {
+export default function Component() {
 
   return (
-    <div className={styles.main}>
+    <div>
     </div>
   );
 }
