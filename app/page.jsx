@@ -24,6 +24,11 @@ export default function HomePage() {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
 
+  const startGame = () => {
+    router.push("page/dashboard");
+
+  }
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const router = useRouter();
@@ -106,6 +111,9 @@ export default function HomePage() {
         <h1>
           Press <div className={styles.logoA}>A</div> to start
         </h1>
+        <button onClick={startGame} className={styles.startBtn}>
+          Start
+        </button>
 
         <button onClick={toggleAudio} className={styles.audioButton}>
           {isPlaying ? (
