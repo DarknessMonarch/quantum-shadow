@@ -1,0 +1,97 @@
+@media screen {
+  .notFound {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 30px;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+
+  .notFoundImg {
+    height: auto;
+    width: 250px;
+    object-fit: cover;
+    background-color: none;
+  }
+
+  .notFound h1 {
+    gap: 10px;
+    display: none;
+    font-size: 1rem;
+    font-weight: 100;
+    align-items: center;
+    color: var(--secondary-color);
+    animation: fadeIn 3s ease-in-out 2s forwards;
+  }
+
+  .logoA {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: .8rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(30, 163, 249, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--background-color);
+    animation: pulse-animation 2s infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(252, 252, 252, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(247, 245, 245, 0);
+    }
+  }
+
+  .backButton {
+    padding: 10px;
+    border-radius: 12px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+    .notFoundImg {
+        width: 400px;
+      }
+
+      .backButton {
+        display: none;
+      }
+
+      .notFound h1 {
+        display: flex;
+      }
+}
+
+/* ipad pro screens & laptop */
+@media only screen and (min-width: 49em) and (max-width: 64em) {
+}
+
+/* large screens : Desktop and 4k screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* 5k screens and above */
+@media only screen and (min-width: 91em) {
+}
